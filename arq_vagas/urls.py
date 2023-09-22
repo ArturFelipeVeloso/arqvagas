@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from apps.core.views import home
 from apps.blog.views import blog
@@ -42,4 +42,6 @@ urlpatterns = [
 
     # http://127.0.0.1:8000/jobs/1/
     path('jobs/<int:id>/', job, name="ver_job"),
+
+    path('grappelli/', include('grappelli.urls')), # grappelli URLS
 ]
