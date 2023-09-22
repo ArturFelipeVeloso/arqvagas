@@ -43,5 +43,6 @@ urlpatterns = [
     # http://127.0.0.1:8000/jobs/1/
     path('jobs/<int:id>/', job, name="ver_job"),
 
-    path('grappelli/', include('grappelli.urls')), # grappelli URLS
+    # grappelli URLS
+    path('grappelli/', include('grappelli.urls')),
 ]
